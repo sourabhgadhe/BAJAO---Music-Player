@@ -1,0 +1,206 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.head{
+    height: 94px;
+    background-color: antiquewhite;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+#logo{
+    width: 50px;
+    padding: 12px
+    
+}
+
+#bajao{
+    margin-left: -30px;
+    margin-bottom: -20px
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    float: right;
+    margin-right: 102px;
+    margin-top: -43px;
+    font-size: 23px;
+    
+}
+
+.container{
+    height: 490px;
+    /* display: flex; */
+    background-color: black;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 70%;
+    margin: 0px auto;
+    border-radius: 12px;
+    padding: 20px;
+    padding-right: 0;
+    padding-top: 7px;
+   
+}
+
+.container img{
+    height: 512px;
+    float: right;
+    margin-top: -506px;
+    border-radius: 13px;
+    width: 444px;
+}
+
+.songList{
+    width: 390px;
+
+}
+
+.bottom{
+    bottom: 0;
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.icons{
+    margin-top: 15px;
+
+}
+
+.icons i{
+    cursor: pointer;
+}
+
+#myProgressBar{
+    width: 80vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+.container .songList div img{
+  
+    width: 50px;
+    height: 50px;
+    margin-top: 0px;
+    border-radius: 50px;
+    margin-left: 5px;
+    
+}
+
+.container .songList div{
+    margin-top: 12px;
+    padding-top: 1px;
+}
+
+.songItem{
+    height: 50px;
+    display: flex;
+    background-color: white;
+    width: 100%;
+    color: black;
+    margin: 12px 0;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 25px;
+    margin-top: 7px;
+}
+
+.songInfo{
+    position: absolute;
+    left: 10vw;
+}
+
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+
+.fa, .far, .fas {
+    font-family: "Font Awesome 5 Free";
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 1090px) {
+    
+    .container img{
+        display: none;
+    }
+  }
+
+
+
+/* Albums CSS */
+
+  .heading{
+
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 30px;
+    margin-top: 28px;
+    padding-left: 40px;
+    font-family: cursive;
+}
+
+/* playlists card */
+
+.playlists-group{
+    
+    width: 100%;
+    min-height: 200px;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    place-content: space-around;
+    padding-top: 45px;
+   
+}
+
+.playlist-card {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 300px
+   
+}
+
+.playlist-card-img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+.playlist-card-name{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+    font-family: cursive;
+}
+.albums
+{
+    height: 500px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+#timestamp{
+    margin-left:-1290px;
+    margin-top: -65px;
+    position: absolute;
+}
+
