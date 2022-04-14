@@ -7,8 +7,8 @@ let myProgressBar = document.getElementById('myProgressBar');
 let masterSongName = document.getElementById('masterSongName');
 let gif = document.getElementById('gif');
 
-
 let songItems = Array.from(document.getElementsByClassName('songItem'));
+let timestamp = document.getElementById('time');
 
 let songs = [
     { songName: "It's Criminal__(Ra-one)", filePath: "songs/1.mp3", coverPath: "covers/1.jpg" },
@@ -52,6 +52,10 @@ audioElement.addEventListener('timeupdate', () => {
     progress = parseInt((audioElement.currentTime / audioElement.duration) * 100)
     myProgressBar.value = progress;
     
+    var s = parseInt(audioElement.currentTime % 60);
+    var m = parseInt((audioElement.currentTime / 60) % 60);
+    timestamp.innerHTML = m + ' : ' + s ;
+
     if(myProgressBar.value == 100)
     {
         gif.style.opacity = 0;
@@ -62,9 +66,9 @@ audioElement.addEventListener('timeupdate', () => {
 
 myProgressBar.addEventListener('change', () => {
     audioElement.currentTime = (myProgressBar.value * audioElement.duration) / 100;
-
-   
+    
 })
+
 
 document.getElementById('next').addEventListener('click', () => {
    
@@ -100,3 +104,5 @@ document.getElementById('previous').addEventListener('click', () => {
     masterPlay.classList.add('fa-pause-circle');
     gif.style.opacity = 1;
 })
+
+
