@@ -45,7 +45,7 @@ body{
     padding: 20px;
     padding-right: 0;
     padding-top: 7px;
-   
+     
 }
 
 .container img{
@@ -141,11 +141,9 @@ body{
     }
   }
 
-
-
 /* Albums CSS */
 
-  .heading{
+.heading{
 
     text-transform: capitalize;
     font-weight: 400;
@@ -166,6 +164,8 @@ body{
     flex-wrap: nowrap;
     place-content: space-around;
     padding-top: 45px;
+
+    
    
 }
 
@@ -201,4 +201,22 @@ body{
     margin-left:-1290px;
     margin-top: -65px;
     position: absolute;
+}
+
+.qr {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    margin-top: 941px;
+    height: 465px;
+
+  
+}
+
+.qr img{
+    height: 300px;
+    width: 300px;
+    margin-top: 70px;
+    padding-bottom: 15px;
+    
 }
