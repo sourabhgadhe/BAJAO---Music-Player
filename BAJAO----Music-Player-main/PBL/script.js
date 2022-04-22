@@ -51,13 +51,12 @@ masterPlay.addEventListener('click', () => {
 audioElement.addEventListener('timeupdate', () => {
     progress = parseInt((audioElement.currentTime / audioElement.duration) * 100)
     myProgressBar.value = progress;
-    
+
     var s = parseInt(audioElement.currentTime % 60);
     var m = parseInt((audioElement.currentTime / 60) % 60);
-    timestamp.innerHTML = m + ' : ' + s ;
+    timestamp.innerHTML = m + ' : ' + s;
 
-    if(myProgressBar.value == 100)
-    {
+    if (myProgressBar.value == 100) {
         gif.style.opacity = 0;
         masterPlay.classList.remove('fa-pause-circle');
         masterPlay.classList.add('fa-play-circle');
@@ -66,15 +65,14 @@ audioElement.addEventListener('timeupdate', () => {
 
 myProgressBar.addEventListener('change', () => {
     audioElement.currentTime = (myProgressBar.value * audioElement.duration) / 100;
-    
+
 })
 
 
 document.getElementById('next').addEventListener('click', () => {
-   
+
     songIndex += 1;
-    if(songIndex>7)
-    {
+    if (songIndex > 7) {
         songIndex = 1;
     }
 
@@ -89,11 +87,10 @@ document.getElementById('next').addEventListener('click', () => {
 })
 
 document.getElementById('previous').addEventListener('click', () => {
-  
+
     songIndex -= 1;
-    if(songIndex==0 || songIndex<0)
-    {
-        songIndex=7;
+    if (songIndex == 0 || songIndex < 0) {
+        songIndex = 7;
     }
 
     audioElement.src = `songs/${songIndex}.mp3`;
@@ -106,3 +103,39 @@ document.getElementById('previous').addEventListener('click', () => {
 })
 
 
+// click on carousels for navigation
+document.getElementById("child1").addEventListener('click', () => {
+    window.open("https://www.jiosaavn.com/radio/hindi", "_blank");
+})
+
+document.getElementById("child2").addEventListener('click', () => {
+    window.open("https://www.jiosaavn.com/album/top-bollywood-movie-songs-of-2021/bqbrhlzBfaM_", "_blank");
+})
+
+document.getElementById("child3").addEventListener('click', () => {
+    window.open("https://www.jiosaavn.com/top-artists", "_blank");
+})
+
+document.getElementById("child4").addEventListener('click', () => {
+    window.open("https://www.jiosaavn.com/new-releases/hindi", "_blank");
+})
+
+document.getElementById("child5").addEventListener('click', () => {
+    window.open("https://www.jiosaavn.com/s/playlist/phulki_user/Romantic_Top_40/m9Qkal5S733ufxkxMEIbIw__", "_blank");
+})
+
+document.getElementById("child6").addEventListener('click', () => {
+    window.open("https://www.jiosaavn.com/artist/silent-songs/GviKKC9ho60_", "_blank");
+})
+
+document.getElementById("child7").addEventListener('click', () => {
+    window.open("https://www.jiosaavn.com/s/playlist/phulki_user/Golden_Oldies/ATyiA13i9H3femJ68FuXsA__", "_blank");
+})
+
+document.getElementById("child8").addEventListener('click', () => {
+    window.open("https://www.jiosaavn.com/s/playlist/phulki_user/Instrumental_-_Hindi/f8XJdpjsuKxuOxiEGmm6lQ__", "_blank");
+})
+
+document.getElementById("child9").addEventListener('click', () => {
+    window.open("https://www.jiosaavn.com/s/playlist/phulki_user/Now_Playing_Pop/IQO11xk800E_", "_blank");
+})
